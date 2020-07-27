@@ -138,11 +138,12 @@ public class CallBackHandler {
 
 
                     default:
-                        sendReadReceipt(senderId);
-                        sendTypingOn(senderId);
+                        sendTextMessage(senderId, "Sizinle tez zamanda elage saxliyacayiq");
+//                        sendReadReceipt(senderId);
+//                        sendTypingOn(senderId);
                         sendSpringDoc(senderId, messageText);
-                        sendQuickReply(senderId);
-                        sendTypingOff(senderId);
+//                        sendQuickReply(senderId);
+//                        sendTypingOff(senderId);
                 }
             } catch (MessengerApiException | MessengerIOException e) {
                 handleSendException(e);
