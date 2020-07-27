@@ -122,17 +122,18 @@ public class CallBackHandler {
 
             logger.info("Received message '{}' with text '{}' from user '{}' at '{}'",
                     messageId, messageText, senderId, timestamp);
+            String  s = " Salam";
 
             try {
                 switch (messageText.toLowerCase()) {
 
 
-                    case "yo":
-                        sendTextMessage(senderId, "Hello, What I can do for you ? Type the word you're looking for");
+                    case "salam":
+                        sendTextMessage(senderId, "Salam Aleykum");
                         break;
 
-                    case "great":
-                        sendTextMessage(senderId, "You're welcome :) keep rocking");
+                    case "necesen?":
+                        sendTextMessage(senderId, "ela . Sen necesen?");
                         break;
 
 
