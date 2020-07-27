@@ -11,7 +11,7 @@ import com.github.messenger4j.send.MessengerSendClient;
 
 @SpringBootApplication
 public class DemoApplication {
-   // private static final Logger logger = LoggerFactory.getLogger(SpringDocBotApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(DemoApplication.class);
 
     /**
      * Initializes the {@code MessengerSendClient}.
@@ -20,7 +20,7 @@ public class DemoApplication {
      */
     @Bean
     public MessengerSendClient messengerSendClient(@Value("${messenger4j.pageAccessToken}") String pageAccessToken) {
-        //logger.debug("Initializing MessengerSendClient - pageAccessToken: {}", pageAccessToken);
+        logger.debug("Initializing MessengerSendClient - pageAccessToken: {}", pageAccessToken);
         return MessengerPlatform.newSendClientBuilder(pageAccessToken).build();
     }
     public static void main(String[] args) {
